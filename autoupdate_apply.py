@@ -1,4 +1,4 @@
-# Just Copy-Paste this inside of your project! It's super easy to auto-update! (make sure to fill the blanks text!)
+# Just Copy-Paste this inside of your project! It's super easy to auto-update! (make sure to fill the blank variables!)
 # Made by YvzSlmDrms54 — keep this comment and credit me if you want, remove it if you don't, no hard feelings either way!
 # Licensed under PolyForm Noncommercial 1.0.0 — free for personal/non-commercial use, contact me for commercial use.
 # Official download for this code : github.com/easy_autoupdate
