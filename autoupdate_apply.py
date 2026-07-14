@@ -1,13 +1,14 @@
 # Just Copy-Paste this inside of your project! It's super easy to auto-update! (make sure to fill the blanks text!)
 # Made by YvzSlmDrms54 — keep this comment and credit me if you want, remove it if you don't, no hard feelings either way!
-# Official download for this portable auto-update code : github.com/easy_autoupdate
+# Licensed under PolyForm Noncommercial 1.0.0 — free for personal/non-commercial use, contact me for commercial use.
+# Official download for this code : github.com/easy_autoupdate
 
 import os, json, shutil, urllib.request as u
 
 # >>> fill these in for your project <
-GITHUB_USER, GITHUB_REPO, CURRENT_VERSION = "YOUR_USERNAME", "YOUR_REPO", "vX.X.X"
+GITHUB_USER, GITHUB_REPO, CURRENT_VERSION = "YOUR_USERNAME", "YOUR_REPO", "vX.X.X" # Update CURRENT_VERSION before releasing
 
-def check_for_updates(auto_apply=True):
+def check_for_updates():
     # ask GitHub for the latest release info
     try:
         req = u.Request(f"https://api.github.com/repos/{GITHUB_USER}/{GITHUB_REPO}/releases/latest", headers={"User-Agent": "x"})
@@ -33,6 +34,5 @@ def check_for_updates(auto_apply=True):
     print(f"Downloaded {asset['name']}! ✔")
 
     # overwrite the currently running script with the new one
-    if auto_apply:
-        shutil.copy(target, os.path.abspath(__file__))
-        print("Update applied. Restart to take effect.")
+    shutil.copy(target, os.path.abspath(__file__))
+    print("Update applied. Restart to take effect.")
